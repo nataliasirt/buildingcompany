@@ -20,7 +20,6 @@ public class Building {
         this.floorCount = floorCount;
         this.totalArea = totalArea;
     }
-
     public TypeBuilding getTypeBuilding() {
         return typeBuilding;
     }
