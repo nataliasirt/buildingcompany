@@ -1,12 +1,16 @@
 package com.solvd.laba.buildingcompany.manage;
-
 import com.solvd.laba.buildingcompany.enums.TypeBuilding;
+import com.solvd.laba.buildingcompany.people.Engineer;
+import com.solvd.laba.buildingcompany.people.Worker;
+import java.util.List;
 
 public class Building {
     private TypeBuilding typeBuilding;
     private int floorArea;
     private int floorCount;
     private int totalArea;
+    private List<Engineer> engineers;
+    private List<Worker> workers;
 
     public Building() {
     }
@@ -47,6 +51,22 @@ public class Building {
 
     public void setTotalArea(int totalArea) {
         this.totalArea = totalArea;
+    }
+
+    public List<Engineer> getEngineers() {
+        return engineers;
+    }
+
+    public void setEngineers(List<Engineer> engineers) {
+        this.engineers = engineers;
+    }
+
+    public List<Worker> getWorkers() {
+        return workers;
+    }
+
+    public void setWorkers(List<Worker> workers) {
+        this.workers = workers;
     }
 }
 

@@ -2,7 +2,7 @@ package com.solvd.laba.buildingcompany.manage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Area implements IArea{
+public abstract class Area implements IArea{
     private static final Logger logger = LogManager.getLogger(Area.class);
     private int width;
     private int length;

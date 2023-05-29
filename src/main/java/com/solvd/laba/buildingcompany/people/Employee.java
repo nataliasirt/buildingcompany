@@ -9,7 +9,6 @@ public class Employee extends Person implements IEmployee {
     private int salary;
     private int dailyRate;
     private int numberOfEmployee;
-    private int totalEmployeeCost;
     public Employee(){
 
     }
@@ -18,7 +17,6 @@ public class Employee extends Person implements IEmployee {
         this.salary = salary;
         this.dailyRate = dailyRate;
         this.numberOfEmployee = numberOfEmployee;
-        this.totalEmployeeCost = totalEmployeeCost;
 
     }
     public int getDailyRate() {
@@ -45,9 +43,6 @@ public class Employee extends Person implements IEmployee {
         return numberOfEmployee * dailyRate;
     }
 
-    public void setTotalEmployeeCost(int totalEmployeeCost) {
-        this.totalEmployeeCost = totalEmployeeCost;
-    }
 
     public void setSalary(int salary) throws InvalidNumberException {
         if (salary > 0) {

@@ -1,19 +1,24 @@
 package com.solvd.laba.buildingcompany.payment;
 
-public class Invoice {
+import java.time.LocalDate;
+
+public class Invoice implements IInvoice {
     private int invoiceNumber;
-    private String dateIssued;
-    private String dueDate;
+    private LocalDate dateIssued;
+    private LocalDate dueDate;
     private double amountDue;
     private double totalPriceBeforeTax;
     private double taxAmount;
     private double totalPrice;
 
-    public Invoice(int invoiceNumber, double totalPriceBeforeTax, double taxAmount, double totalPrice){
+    public Invoice(int invoiceNumber, LocalDate dateIssued, LocalDate dueDate, double totalPriceBeforeTax, double taxAmount, double totalPrice){
         this.invoiceNumber = invoiceNumber;
+        this.dateIssued = dateIssued;
+        this.dueDate = dueDate;
         this.totalPriceBeforeTax = totalPriceBeforeTax;
         this.taxAmount = taxAmount;
         this.totalPrice = totalPrice;
+
 
     }
 
@@ -25,19 +30,19 @@ public class Invoice {
         this.invoiceNumber = invoiceNumber;
     }
 
-    public String getDateIssued() {
+    public LocalDate getDateIssued() {
         return dateIssued;
     }
 
-    public void setDateIssued(String dateIssued) {
+    public void setDateIssued(LocalDate dateIssued) {
         this.dateIssued = dateIssued;
     }
 
-    public String getDueDate() {
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
@@ -50,11 +55,7 @@ public class Invoice {
     }
 
     public double getTotalPriceBeforeTax() {
-        return totalPriceBeforeTax;
-    }
-
-    public void setTotalPriceBeforeTax(double totalPriceBeforeTax) {
-        this.totalPriceBeforeTax = totalPriceBeforeTax;
+        return amountDue;
     }
 
     public double getTaxAmount() {
@@ -66,11 +67,9 @@ public class Invoice {
     }
 
     public double getTotalPrice() {
-        return totalPrice;
+        return getTotalPriceBeforeTax() + getTaxAmount();
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-
     }
-}
+
+
