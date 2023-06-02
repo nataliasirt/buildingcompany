@@ -6,11 +6,14 @@ public abstract class Area implements IArea{
     private static final Logger logger = LogManager.getLogger(Area.class);
     private int width;
     private int length;
-    private int price;
+    private int floorArea;
     public Area(int width, int length, int price){
         this.width = width;
         this.length = length;
-        this.price = price;
+    }
+
+    public void setFloorArea(int floorArea) {
+        this.floorArea = floorArea;
     }
 
     public int getWidth() {
@@ -37,26 +40,18 @@ public abstract class Area implements IArea{
         }
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        if (price > 0) {
-            this.price = price;
-        } else {
-            throw new IllegalArgumentException("Price cannot be null!");
-        }
-    }
-
     @Override
     public String toString() {
-        logger.info("Area" + width+ "width" + length + "length" + price + "price");
+        logger.info("Area" + width+ "width" + length + "length" + floorArea + "Floor Area");
         return "Area{" +
                 "width=" + width +
                 ", length=" + length +
-                ", price=" + price +
+                ", price=" + floorArea +
                 '}';
+    }
+    @Override
+    public double getFloorArea() {
+        return width * length;
     }
 }
 

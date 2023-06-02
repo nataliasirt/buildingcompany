@@ -44,7 +44,7 @@ public class Cost implements ICost {
     }
     @Override
     public double getTotalCost(){
-        return ((dailyRate * numberOfEmployees)+ getMaterialsCost()) ;
+        return ((dailyRate * numberOfEmployees)+ getMaterialsCost());
     }
     }
 

@@ -9,9 +9,9 @@ public class Employee extends Person implements IEmployee {
     private int salary;
     private int dailyRate;
     private int numberOfEmployee;
-    public Employee(){
 
-    }
+    public Employee() {}
+
     public Employee(String fullName, int age, int salary, int dailyRate, int numberOfEmployee, int totalEmployeeCost) {
         super(fullName, age);
         this.salary = salary;
@@ -19,6 +19,7 @@ public class Employee extends Person implements IEmployee {
         this.numberOfEmployee = numberOfEmployee;
 
     }
+
     public int getDailyRate() {
         return dailyRate;
     }
@@ -35,14 +36,6 @@ public class Employee extends Person implements IEmployee {
         this.numberOfEmployee = numberOfEmployee;
     }
 
-    public double getSalary() {
-        return salary;
-    }
-
-    public int getTotalEmployeeCost() {
-        return numberOfEmployee * dailyRate;
-    }
-
 
     public void setSalary(int salary) throws InvalidNumberException {
         if (salary > 0) {
@@ -50,7 +43,6 @@ public class Employee extends Person implements IEmployee {
         } else {
             throw new InvalidNumberException("Salary cannot be null!");
         }
-
     }
 
     @Override
@@ -67,8 +59,6 @@ public class Employee extends Person implements IEmployee {
         return (dailyRate * numberOfEmployee);
 
     }
-    public final void login() {LOGGER.info("Employee logged into account");
-        }
-    }
+}
 
 

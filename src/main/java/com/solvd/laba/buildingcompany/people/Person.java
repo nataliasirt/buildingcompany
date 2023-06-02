@@ -7,7 +7,6 @@ public abstract class Person {
     private int age;
 
     public Person(){
-
     }
 
     public Person(String fullName, int age){
@@ -32,8 +31,6 @@ public abstract class Person {
             throw new InvalidDataException("Age cannot be null!");
         }
     }
-
-
 }
 
 
