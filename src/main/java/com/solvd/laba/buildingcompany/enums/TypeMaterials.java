@@ -2,11 +2,12 @@ package com.solvd.laba.buildingcompany.enums;
 
 public enum TypeMaterials {
     WOOD("Wood"),
-    GLASS("Glass"),
-    CONCRETE("Concrete");
-    private String type;
-    private TypeMaterials (String materilasName)
-    {type = materilasName;}
+    CEMENT("Cement"),
+    GLASS("Glass");
+
+    private final String type;
+    private TypeMaterials (String materialsName)
+    {this.type = materialsName;}
     public String getType() {
         return type;
     }

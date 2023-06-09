@@ -4,30 +4,27 @@ import com.solvd.laba.buildingcompany.people.Engineer;
 import com.solvd.laba.buildingcompany.people.Worker;
 import java.util.List;
 
-public class Building {
+public class Building implements IBuilding {
     private TypeBuilding typeBuilding;
     private int floorArea;
     private int floorCount;
     private int totalArea;
-    private List<Engineer> engineers;
-    private List<Worker> workers;
 
     public Building() {
     }
-
     public Building(TypeBuilding typeBuilding, int floorArea, int floorCount, int totalArea) {
         this.floorArea = floorArea;
         this.floorCount = floorCount;
-        this.totalArea = totalArea;
+        this.totalArea = floorArea * floorCount;
     }
     public TypeBuilding getTypeBuilding() {
         return typeBuilding;
     }
 
     public void setTypeBuilding(TypeBuilding typeBuilding) {
+
         this.typeBuilding = typeBuilding;
     }
-
     public int getFloorArea() {
         return floorArea;
     }
@@ -45,28 +42,12 @@ public class Building {
     }
 
     public int getTotalArea() {
-        return getFloorArea() * getFloorCount();
+        return floorArea * floorCount;
     }
-
     public void setTotalArea(int totalArea) {
         this.totalArea = totalArea;
     }
 
-    public List<Engineer> getEngineers() {
-        return engineers;
-    }
-
-    public void setEngineers(List<Engineer> engineers) {
-        this.engineers = engineers;
-    }
-
-    public List<Worker> getWorkers() {
-        return workers;
-    }
-
-    public void setWorkers(List<Worker> workers) {
-        this.workers = workers;
-    }
 }
 
 

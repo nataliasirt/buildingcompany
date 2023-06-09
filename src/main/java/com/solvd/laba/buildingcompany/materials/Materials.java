@@ -1,21 +1,32 @@
 package com.solvd.laba.buildingcompany.materials;
+import com.solvd.laba.buildingcompany.enums.TypeBuilding;
+import com.solvd.laba.buildingcompany.enums.TypeMaterials;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public final class Materials implements IMaterials{
     private static final Logger LOGGER = LogManager.getLogger(Materials.class);
+    private TypeMaterials typeMaterials;
     private String name;
     private int quantity;
     private int pricePerEach;
     private int totalCostMaterials;
     public Materials(){
     }
-    public Materials(String name, int quantity, int pricePerEach, int totalCostMaterials){
+    public Materials(TypeMaterials typeMaterials, String name, int quantity, int pricePerEach, int totalCostMaterials){
     this.name = name;
     this.quantity = quantity;
     this.pricePerEach = pricePerEach;
     this.totalCostMaterials = totalCostMaterials;
 
+    }
+
+    public TypeMaterials getTypeMaterials() {
+        return typeMaterials;
+    }
+
+    public void setTypeMaterials(TypeMaterials typeMaterials) {
+        this.typeMaterials = typeMaterials;
     }
 
     public String getName() {
@@ -66,5 +77,6 @@ public final class Materials implements IMaterials{
     public int getMaterialsCost() {
         return this.quantity * this.pricePerEach;
     }
+
 
 }

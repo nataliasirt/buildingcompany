@@ -8,8 +8,8 @@ public  class Engineer extends Employee implements IEngineer {
     public Engineer(){
 
     }
-    public Engineer(String fullName, int age, int salary, int dailyRate, int numberOfEmployee, int totalEmployeeCost) {
-        super(fullName, age, salary, dailyRate, numberOfEmployee, totalEmployeeCost);
+    public Engineer(int salary, int dailyRate, int numberOfEmployee) {
+        super(salary, dailyRate, numberOfEmployee);
         this.dailyRate = dailyRate;
         this.numberOfEmployee = numberOfEmployee;
     }

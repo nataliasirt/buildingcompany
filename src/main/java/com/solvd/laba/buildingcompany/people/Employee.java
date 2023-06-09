@@ -1,6 +1,5 @@
 package com.solvd.laba.buildingcompany.people;
 import com.solvd.laba.buildingcompany.exceptions.InvalidNumberException;
-import com.solvd.laba.buildingcompany.manage.ICost;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,20 +8,22 @@ public class Employee extends Person implements IEmployee {
     private int salary;
     private int dailyRate;
     private int numberOfEmployee;
+    public Employee(){}
 
-    public Employee() {}
+    public Employee(int salary, int dailyRate, int numberOfEmployee) {}
 
-    public Employee(String fullName, int age, int salary, int dailyRate, int numberOfEmployee, int totalEmployeeCost) {
+    public Employee(String fullName, int age, int salary, int dailyRate, int numberOfEmployee) {
         super(fullName, age);
         this.salary = salary;
         this.dailyRate = dailyRate;
         this.numberOfEmployee = numberOfEmployee;
 
     }
-
     public int getDailyRate() {
         return dailyRate;
     }
+
+
 
     public void setDailyRate(int dailyRate) {
         this.dailyRate = dailyRate;

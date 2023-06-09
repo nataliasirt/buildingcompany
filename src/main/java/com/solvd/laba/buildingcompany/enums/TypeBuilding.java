@@ -5,7 +5,7 @@ public enum TypeBuilding {
     BUSINESS ("Business"),
     LUX ("Luxury");
 
-    private String type;
+    private final String type;
 
     private TypeBuilding(String buildingName) {
         this.type = buildingName;

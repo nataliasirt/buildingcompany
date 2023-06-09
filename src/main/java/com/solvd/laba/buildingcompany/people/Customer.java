@@ -26,5 +26,4 @@ public class Customer extends Person{
         }
         LOGGER.debug("New customer created");
     }
-    public final void login() {LOGGER.info("Customer logged into account");}
     }
