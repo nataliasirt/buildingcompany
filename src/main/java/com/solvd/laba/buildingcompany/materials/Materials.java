@@ -77,6 +77,4 @@ public final class Materials implements IMaterials{
     public int getMaterialsCost() {
         return this.quantity * this.pricePerEach;
     }
-
-
 }
