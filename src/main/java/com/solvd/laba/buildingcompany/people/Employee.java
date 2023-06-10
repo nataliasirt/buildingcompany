@@ -23,8 +23,6 @@ public class Employee extends Person implements IEmployee {
         return dailyRate;
     }
 
-
-
     public void setDailyRate(int dailyRate) {
         this.dailyRate = dailyRate;
     }

@@ -22,7 +22,6 @@ public class Main {
         woodMaterials.setQuantity(25);
         woodMaterials.setPricePerEach(50);
         woodMaterials.setTypeMaterials(TypeMaterials.WOOD);
-        woodMaterials.setTotalCostMaterials(woodMaterials.getQuantity() * woodMaterials.getPricePerEach());
         LOGGER.info("Calculate Total Cost of Wood in USD " + woodMaterials.getMaterialsCost());
 
         Materials cementMaterials = new Materials();
