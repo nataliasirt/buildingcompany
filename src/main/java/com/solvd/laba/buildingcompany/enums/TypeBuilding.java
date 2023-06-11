@@ -14,7 +14,6 @@ public enum TypeBuilding {
     public String getType() {
         return type;
     }
-
     }
 
 

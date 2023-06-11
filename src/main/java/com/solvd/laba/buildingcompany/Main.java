@@ -22,14 +22,14 @@ public class Main {
         woodMaterials.setQuantity(25);
         woodMaterials.setPricePerEach(50);
         woodMaterials.setTypeMaterials(TypeMaterials.WOOD);
-        LOGGER.info("Calculate Total Cost of Wood in USD " + woodMaterials.getMaterialsCost());
+        LOGGER.info("Calculate Total Cost of Wood in USD " + woodMaterials.getTotalCostMaterials());
 
         Materials cementMaterials = new Materials();
         cementMaterials.setQuantity(50);
         cementMaterials.setPricePerEach(50);
         cementMaterials.setTypeMaterials(TypeMaterials.CEMENT);
-        LOGGER.info("Calculate Total Cost of Cement in USD " + cementMaterials.getMaterialsCost());
-        LOGGER.info("Calculate Total Cost of Wood & Cement in USD " + ((cementMaterials.getTotalCostMaterials()) +(woodMaterials.getMaterialsCost())));
+        LOGGER.info("Calculate Total Cost of Cement in USD " + cementMaterials.getTotalCostMaterials());
+        LOGGER.info("Calculate Total Cost of Wood & Cement in USD " + ((cementMaterials.getTotalCostMaterials()) +(woodMaterials.getTotalCostMaterials())));
 
         Employee employee = new Employee();
         employee.setNumberOfEmployee(10);

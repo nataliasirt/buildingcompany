@@ -1,6 +1,5 @@
 package com.solvd.laba.buildingcompany.connections;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,6 @@ public class ConnectionPool {
 
     public static ConnectionPool connectionPool;
     private List<Connection> connections;
-
 
     private ConnectionPool() {
         connections = new ArrayList<>();
@@ -22,7 +20,6 @@ public class ConnectionPool {
             connectionPool = new ConnectionPool();
         }
         return connectionPool;
-
     }
 
 
@@ -32,7 +29,6 @@ public class ConnectionPool {
             connections.add(connection);
         }
     }
-
 
     public synchronized Connection getConnection () throws InterruptedException {
         while (connections.isEmpty()){

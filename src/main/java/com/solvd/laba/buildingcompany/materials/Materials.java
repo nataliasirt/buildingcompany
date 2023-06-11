@@ -1,24 +1,22 @@
 package com.solvd.laba.buildingcompany.materials;
-import com.solvd.laba.buildingcompany.enums.TypeBuilding;
 import com.solvd.laba.buildingcompany.enums.TypeMaterials;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public final class Materials implements IMaterials{
+public final class Materials implements IMaterials {
     private static final Logger LOGGER = LogManager.getLogger(Materials.class);
     private TypeMaterials typeMaterials;
     private String name;
     private int quantity;
     private int pricePerEach;
-    private int totalCostMaterials;
-    public Materials(){
-    }
-    public Materials(TypeMaterials typeMaterials, String name, int quantity, int pricePerEach, int totalCostMaterials){
-    this.name = name;
-    this.quantity = quantity;
-    this.pricePerEach = pricePerEach;
-    this.totalCostMaterials = totalCostMaterials;
 
+    public Materials() {
+    }
+
+    public Materials(TypeMaterials typeMaterials, String name, int quantity, int pricePerEach) {
+        this.name = name;
+        this.quantity = quantity;
+        this.pricePerEach = pricePerEach;
     }
 
     public TypeMaterials getTypeMaterials() {
@@ -29,8 +27,7 @@ public final class Materials implements IMaterials{
         this.typeMaterials = typeMaterials;
     }
 
-    public String getName() {
-        return name;
+    public String getName() {return name;
     }
 
     public void setName(String name) {
@@ -53,19 +50,11 @@ public final class Materials implements IMaterials{
         this.pricePerEach = pricePerEach;
     }
 
-    public int getTotalCostMaterials() {
-        return getQuantity() * getPricePerEach();
-    }
-
-    public void setTotalCostMaterials(int totalCostMaterials) {
-        this.totalCostMaterials = totalCostMaterials;
-    }
-
     @Override
     public String toString() {
         LOGGER.info("Materials = " +
-                "name = "  + name +
-                "quantity = " + quantity+
+                "name = " + name +
+                "quantity = " + quantity +
                 "pricePerEach = " + pricePerEach);
         return "Materials{" +
                 "name = " + name + '\'' +
@@ -74,7 +63,9 @@ public final class Materials implements IMaterials{
                 '}';
     }
     @Override
-    public int getMaterialsCost() {
-        return this.quantity * this.pricePerEach;
+    public int getTotalCostMaterials() {
+        return quantity * pricePerEach;
     }
 }
+
+
